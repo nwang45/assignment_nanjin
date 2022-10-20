@@ -7,8 +7,8 @@
     "start-dev": "nodemon app.js"
   },
   "engines": {
-    "node": "^16.17.1",
-    "npm": "^8.0.0"
+    "node": "^12.18.3",
+    "npm": "^6.0.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.14.0",
