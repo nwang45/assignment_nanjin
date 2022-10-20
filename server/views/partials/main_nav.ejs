@@ -1,0 +1,77 @@
+<!--Main Navigation-->
+
+<!--Assignment 1, Nanjin Wang, 301243786, October 2nd, 2022-->
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="/"> <img src="logo.jpg" alt="photo" width="40" height="40"> Nanjin Wang</a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+      
+     <% if (title == "Home")  { %>
+      <li class="nav-item active">
+     <% } else { %>
+    <li class="nav-item">
+      <% } %>
+        <a class="nav-link" href="/home"><i class="fas fa-lg fa-solid fa-globe"></i> Home</a>
+      </li>
+
+      <% if(title == "About") { %>
+        <li class="nav-item active">
+       <% } else { %>
+      <li class="nav-item">
+        <% } %>
+        <a class="nav-link" href="/about"><i class="fas fa-lg fa-solid fa-address-card"></i> About</a>
+      </li>
+
+      <% if(title == "Projects") { %>
+        <li class="nav-item active">
+       <% } else { %>
+      <li class="nav-item">
+        <% } %>
+        <a class="nav-link" href="/projects"><i class="fas fa-lg fa-regular fa-download"></i> Projects</a>
+      </li>
+
+      <% if(title == "Services") { %>
+        <li class="nav-item active">
+       <% } else { %>
+      <li class="nav-item">
+        <% } %>
+          <a class="nav-link" href="/services"><i class="fas fa-lg fa-solid fa-pen-nib"></i> Services</a>
+        </li>
+
+          
+        <% if (title == "Books") { %>
+          <li class="nav-item active">
+          <% } else  { %>
+          <li class="nav-item">
+          <% } %>
+          <a class="nav-link" href="/book-list"><i class="fas fa-lg fa-solid fa-book-medical"></i> Books</a>
+          </li>
+
+        <% if(title == "Contact") { %>
+          <li class="nav-item active">
+         <% } else { %>
+        <li class="nav-item">
+          <% } %>
+            <a class="nav-link" href="/contact"><i class="fas fa-lg fa-solid fa-comment"></i> Contact</a>
+          </li>
+
+          <!--LOGIN and LOGOUT sign-->
+          <% if(typeof displayName == 'string' && displayName) { %>
+            <li class="navbar-text"><i class="fas fa-lg fa-user"></i> Welcome, <%= displayName %></li>
+            <li class="nav-item"><a href="/logout" class="nav-link">
+              <i class="fas fa-lg fa-sign-out-alt"></i> Logout</a></li>
+          <% } else { %>
+            <li class="nav-item"><a href="/login" class="nav-link">
+              <i class="fas fa-lg fa-sign-in-alt"></i> Login</a></li>
+          <% } %>
+  
+         
+ 
+  </div>
+</nav>
