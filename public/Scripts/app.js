@@ -14,7 +14,7 @@
                 if(!confirm("Are you sue to delete?"))
                 {
                     event.preventDefault();
-                    window.location.assign('/book-list');
+                    window.location.assign('/contact-list');
                 }
             });
         }
